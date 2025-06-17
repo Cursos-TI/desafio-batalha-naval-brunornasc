@@ -36,5 +36,37 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    int tabuleiro[5][5] = {0}; // Inicializa a matriz com zeros
+
+    // Posição do navio horizontal (linha 1, colunas 0 a 2)
+    tabuleiro[1][0] = 1;
+    tabuleiro[1][1] = 1;
+    tabuleiro[1][2] = 1;
+
+    // Posição do navio vertical (coluna 3, linhas 2 a 4)
+    tabuleiro[2][3] = 2;
+    tabuleiro[3][3] = 2;
+    tabuleiro[4][3] = 2;
+
+    // Exibe as coordenadas do navio horizontal
+    printf("Coordenadas do Navio Horizontal:\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (tabuleiro[i][j] == 1) {
+                printf("(%d, %d)\n", i, j);
+            }
+        }
+    }
+
+    // Exibe as coordenadas do navio vertical
+    printf("\nCoordenadas do Navio Vertical:\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (tabuleiro[i][j] == 2) {
+                printf("(%d, %d)\n", i, j);
+            }
+        }
+    }
+
     return 0;
 }
